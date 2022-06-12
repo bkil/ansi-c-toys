@@ -10,7 +10,6 @@ systems other than Linux and BSD and on certain file systems.
 
 int
 main(const int argc, const char**argv) {
-  errno = 0;
   DIR *dirp = opendir(argc >= 2 ? argv[1] : ".");
   if (!dirp) {
     perror("opendir");
